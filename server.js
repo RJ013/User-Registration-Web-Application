@@ -13,16 +13,9 @@ var app = express();
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.mongo_Url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}, (err) => {
-  if (!err) {
-    console.log('MongoDB Connection Succeeded.');
-  } else {
-    console.log('Error in DB connection: ' + err);
-  }
-});
+mongoose
+  .connect(process.env.mongo_URL)
+  .then((e) => console.log("MongoDB Connected"));
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
