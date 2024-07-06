@@ -14,7 +14,7 @@ var app = express();
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.mongo_URL)
+  .connect('mongodb+srv://rohitjaiswalofficial:Dos5qpl9johIRY7L@cluster0.3xbp8pw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then((e) => console.log("MongoDB Connected"));
 
 var db = mongoose.connection;
