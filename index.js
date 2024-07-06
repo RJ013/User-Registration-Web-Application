@@ -27,7 +27,7 @@ app.use(session({
   resave: true,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: 'mongodb://localhost:27017/productDB',
+    mongoUrl: 'mongodb+srv://auth:qwertyuiop@cluster0.3f6wpmj.mongodb.net/Auth?retryWrites=true&w=majority&appName=Cluster0',
     // Additional options if needed
   })
 }));
@@ -63,5 +63,5 @@ app.use(function (err, req, res, next) {
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
-  console.log('Server is started on http://127.0.0.1:' + PORT);
+  console.log('Server is started ' + PORT);
 });
