@@ -11,7 +11,7 @@ var MongoStore = require('connect-mongo');
 var app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/productDB', {
+mongoose.connect(process.env.mongo_Url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {
